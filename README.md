@@ -1,2 +1,2 @@
 # tdash
-A very simple JavaScript solution for i18n/multiple language support in websites.
+Simple JavaScript translation for static websites. Utilizes Custom Elements/Web Components.
