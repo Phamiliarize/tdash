@@ -8,11 +8,9 @@ tdash is a simple, intuitive solution for front-end translations on websites tha
 
 That's it. No repetitve code, attributes, or templating languages required.
 
-tdash itself is implemented in JavaScript and utilizes Web Component & Custom Element APIs. 
+tdash itself is implemented in JavaScript and utilizes Web Component & Custom Element APIs. It is small weighing in at **~2KB**.
 
-## Features
-
-## Install
+## Usage
 ### Dependencies
 [Web Component & Cusotm Element APIs](https://caniuse.com/?search=custom%20element) are supported on most modern browsers out of the box now. If you need to target older browsers, you will need a [polyfill](https://github.com/ungap/custom-elements) or similar solution. If you wind up using a polyfill make sure it is the absolute first thing in your head tag.
 
