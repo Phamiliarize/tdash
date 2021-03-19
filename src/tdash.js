@@ -10,7 +10,7 @@ const HTMLParsedElement = (() => { const e = "DOMContentLoaded", t = new WeakMap
  */
 
 const defSettings = {
-    "fallback": "default"
+    "fallback": "key"
 }
 
 class TDash {

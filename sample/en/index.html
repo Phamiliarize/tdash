@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head> 
+  <meta charset="utf-8">
+  <title>sample</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="/sample/assets/tdash.js"></script> 
+  <script>
+        let tdash = new TDash("en", { fallback: "default" })
+        tdash.addLang("en", "/sample/assets/en.json")
+        tdash.init()
+  </script>
+</head>
+<body>
+  <h1><t->title</t-></h1>
+  <t->Hello</t->
+  <t->tdash is awesome!</t->
+  <t->fallback_key</t->
+  <t->fallback_english</t->
+ </body>
+</html>
