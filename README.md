@@ -18,7 +18,7 @@ tdash itself is implemented in JavaScript and utilizes Web Component & Custom El
 Import tdash before **all** other scripts (or if using polyfill, directly after the polyfill.)
 
 ```
-tdash script import
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/phamiliarize/tdash/tdash.min.js"></script> 
 ```
 
 Next you must initialize an instance of the TDash class as a variable named `tdash`. 
