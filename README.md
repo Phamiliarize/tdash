@@ -38,11 +38,20 @@ Next you must initialize an instance of the TDash class as a variable named `tda
 |----------|--------------------|---------|--------------------------------------------------------------------------------------------------------------------------------|
 | fallback | "default" or "key" | "key"   | When the key is not found in the current language fallback to either the default language first, or fall back directly to key. |
 
+#### Changing Language
+The tdash object exposes an `updateLang` method that takes a string. You can change languages live at anytime utilizing that method.
+
+```
+tdash.changeLang("en")
+```
+
+Will change the language to en, then cause a re-render on all tdash tags with an attempt to pull from the defined English translations.
 
 ## Contributing
-Contributors always welcome. Let's see how much we can push web components and custom elements! Things we need to develop:
-- Live Language Switch
-- SEO Optimization
--- For Google there should be no problems- bing does not like JavaScript though.
+Contributors always welcome. Let's see how much we can push web components and custom elements!
+
+Particularly SEO optimization should be considered for Bing/Duckgo etc.
+
+This should work fine with Google/ASK however, as they render JavaScript.
 
 
