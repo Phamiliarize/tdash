@@ -11,10 +11,19 @@
     tdash.addLang("ja", "/sample/assets/ja.json")
     tdash.addLang("en", "/sample/assets/en.json")
     tdash.init()
+
+    function changeLanguage(event){
+      tdash.updateLang(event.target.value);
+    }
   </script>
 </head>
 
 <body>
+  <select id="lc" onchange="changeLanguage(event)">
+    <option value="en">English</option>
+    <option value="ja">日本語</option>
+  </select>
+  <hr />
   <h1>
     <t->title</t->
   </h1>
@@ -22,6 +31,9 @@
   <t->tdash is awesome!</t->
   <t->fallback_key</t->
   <t->fallback_english</t->
+  <script>
+        document.getElementById('lc').value = tdash.currentLang;
+  </script>
 </body>
 
 </html>

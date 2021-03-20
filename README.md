@@ -1,20 +1,19 @@
 # tdash
-tdash is a simple, intuitive solution for front-end translations on websites that allows you to translate text by simply wrapping it in tdash tags and providing JSON files that hold your translations.
+tdash is a simple, intuitive solution for front-end translations on websites. Simply provide a JSON file with translations and tag any text you wish to translate...
 
 ```
 <t->my text</t->
 <t->my_key</t->
 ```
-
-That's it. No repetitve code, attributes, or templating languages required.
+and voila- your text will be translated. i18n couldn't get any simpler.
 
 tdash itself is implemented in JavaScript and utilizes Web Component & Custom Element APIs. It is small weighing in at **~2KB**.
 
-## Usage
+## Detailed Usage
 ### Dependencies
 [Web Component & Cusotm Element APIs](https://caniuse.com/?search=custom%20element) are supported on most modern browsers out of the box now. If you need to target older browsers, you will need a [polyfill](https://github.com/ungap/custom-elements) or similar solution. If you wind up using a polyfill make sure it is the absolute first thing in your head tag.
 
-### tdash
+### Initialize tdash
 Import tdash before **all** other scripts (or if using polyfill, directly after the polyfill.)
 
 ```
@@ -38,14 +37,17 @@ Next you must initialize an instance of the TDash class as a variable named `tda
 |----------|--------------------|---------|--------------------------------------------------------------------------------------------------------------------------------|
 | fallback | "default" or "key" | "key"   | When the key is not found in the current language fallback to either the default language first, or fall back directly to key. |
 
-#### Changing Language
-The tdash object exposes an `updateLang` method that takes a string. You can change languages live at anytime utilizing that method.
+### Language Changing/Switching
+The tdash object exposes an `updateLang` method that takes a string of the language you wish to switch to, like so:
 
 ```
-tdash.updateLang("en")
+tdash.updateLang("en");
 ```
 
-Will change the language to en, then cause a re-render on all tdash tags with an attempt to pull from the defined English translations.
+This will change the language to en, then cause a re-render on all tdash tags with an attempt to pull from the defined English translations. 
+
+### Current Language
+`tdash.currentLang` exposes the current language being used. See the sample for one way this can be used!
 
 ## Contributing
 Contributors always welcome. Let's see how much we can push web components and custom elements!
