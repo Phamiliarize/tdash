@@ -42,7 +42,7 @@ Next you must initialize an instance of the TDash class as a variable named `tda
 The tdash object exposes an `updateLang` method that takes a string. You can change languages live at anytime utilizing that method.
 
 ```
-tdash.changeLang("en")
+tdash.updateLang("en")
 ```
 
 Will change the language to en, then cause a re-render on all tdash tags with an attempt to pull from the defined English translations.
