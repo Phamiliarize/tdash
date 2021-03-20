@@ -33,12 +33,16 @@ Next you must initialize an instance of the TDash class as a variable named `tda
 ```
   
  Currently settings has the following options:
+
 | Setting  | Accepts            | Default | Explanation                                                                                                                    |
 |----------|--------------------|---------|--------------------------------------------------------------------------------------------------------------------------------|
 | fallback | "default" or "key" | "key"   | When the key is not found in the current language fallback to either the default language first, or fall back directly to key. |
 
 
-
-
 ## Contributing
-Currently working on adding live-switching. If you wish to contribute to that, clean up any code, or make recommendations they are alway welcome.
+Contributors always welcome. Let's see how much we can push web components and custom elements! Things we need to develop:
+- Live Language Switch
+- SEO Optimization
+-- For Google there should be no problems- bing does not like JavaScript though.
+
+

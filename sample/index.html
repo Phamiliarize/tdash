@@ -1,21 +1,27 @@
 <!doctype html>
 <html lang="ja">
-<head> 
+
+<head>
   <meta charset="utf-8">
-  <title>sample</title>
+  <title>sample (dynamic)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/phamiliarize/tdash/tdash.min.js"></script> 
   <script>
-        let tdash = new TDash("ja", { fallback: "default" })
-        tdash.addLang("ja", "/sample/assets/ja.json")
-        tdash.init()
+    let tdash = new TDash("ja", { fallback: "default" })
+    tdash.addLang("ja", "/sample/assets/ja.json")
+    tdash.addLang("en", "/sample/assets/en.json")
+    tdash.init()
   </script>
 </head>
+
 <body>
-  <h1><t->title</t-></h1>
+  <h1>
+    <t->title</t->
+  </h1>
   <t->Hello</t->
   <t->tdash is awesome!</t->
   <t->fallback_key</t->
   <t->fallback_english</t->
- </body>
+</body>
+
 </html>
