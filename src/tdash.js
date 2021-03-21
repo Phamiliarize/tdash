@@ -18,6 +18,7 @@ class TDash {
         this.languages = {};
         this.currentLang = defaultLang;
         this.settings = settings;
+        document.documentElement.lang = defaultLang;
     }
 
     async addLang(key, path) {
@@ -50,6 +51,7 @@ class TDash {
 
     updateLang(lang) {
         this.currentLang = lang;
+        document.documentElement.lang = lang;
         var event = new Event('updateLang')
         document.querySelectorAll("t-").forEach(t => t.dispatchEvent(event));
     }
