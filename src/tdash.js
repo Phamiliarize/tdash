@@ -15,6 +15,18 @@ class TDash {
         this.defaultLang = defaultLang || "en";
         this.fallback = fallback || "key";
         document.documentElement.lang = this.defaultLang;
+
+        // The Mutation Observer that watches for attribute changes
+        this.observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === "attributes" && mutation.attributeName === "lang") {
+                    // Ensure update is only triggered if the value is new
+                    if (mutation.oldValue !== document.documentElement.lang) {
+                        this.updateLang();
+                    }
+                }
+            });
+        });
     }
 
     async addLang(key, path) {
@@ -40,13 +52,13 @@ class TDash {
             if (Object.keys(this.languages).length > 0) {
                 customElements.define('t-', TDashElement);
                 clearInterval(timer);
+                this.observer.observe(document.documentElement, { attributes: true, attributeOldValue: true });
                 return;
             }
         }, 100);
     }
 
-    updateLang(lang) {
-        document.documentElement.lang = lang;
+    updateLang() {
         var event = new Event('updateLang')
         document.querySelectorAll("t-").forEach(t => t.dispatchEvent(event));
     }
