@@ -10,13 +10,12 @@
     let tdash = new TDash("ja", { fallback: "default", warn: true })
     tdash.addLang("ja", "assets/ja.json")
     tdash.addLang("en", "assets/en.json")
+    var name = "bob"
     tdash.init()
 
     function changeLanguage(event) {
      document.documentElement.lang = event.target.value;
     }
-
-    var name = "bob"
   </script>
 </head>
 
@@ -29,11 +28,13 @@
   <h1>
     <t->title</t->
   </h1>
-  <t->Hello</t->
-  <t->tdash is awesome!</t->
-  <t->fallback_key</t->
-  <t->fallback_english</t->
   <t->Hello name. Your name is made from a variable.</t->
+  <br />
+  <t->tdash is awesome!</t->
+  <br />
+  <t->fallback_key</t->
+  <br />
+  <t->fallback_english</t->
   <script>
     document.getElementById('lc').value = document.documentElement.lang;
   </script>
