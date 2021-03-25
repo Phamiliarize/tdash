@@ -3,18 +3,20 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Docs</title>
+  <title>sample (dynamic)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/phamiliarize/tdash@latest/tdash.min.js"></script>
   <script>
-    let tdash = new TDash("ja", { fallback: "default" })
-    tdash.addLang("ja", "/tdash/assets/ja.json")
-    tdash.addLang("en", "/tdash/assets/en.json")
+    let tdash = new TDash("ja", { fallback: "default", warn: true })
+    tdash.addLang("ja", "/sample/assets/ja.json")
+    tdash.addLang("en", "/sample/assets/en.json")
     tdash.init()
 
     function changeLanguage(event) {
      document.documentElement.lang = event.target.value;
     }
+
+    var name = "bob"
   </script>
 </head>
 
@@ -31,6 +33,7 @@
   <t->tdash is awesome!</t->
   <t->fallback_key</t->
   <t->fallback_english</t->
+  <t->Hello name. Your name is made from a variable.</t->
   <script>
     document.getElementById('lc').value = document.documentElement.lang;
   </script>

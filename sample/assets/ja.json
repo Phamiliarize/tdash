@@ -1,1 +1,1 @@
-{"title":"tdash - 静的サイト用i18n","Hello":"こんにちは","tdash is awesome!":"tdashは素晴らしいわぁ!"}
+{"title":"tdash - 静的サイト用i18n","Hello":"こんにちは","tdash is awesome!":"tdashは素晴らしいわぁ!","Hello name. Your name is made from a variable.":"こんにちは、{name}様。 今、名前が変数からできています。"}

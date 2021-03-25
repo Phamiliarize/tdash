@@ -1,1 +1,1 @@
-{"title":"tdash - i18n for static sites","Hello":"Hello","tdash is awesome!":"tdash is aweosme","fallback_english":"This phrase is in the english files!"}
+{"title":"tdash - i18n for static sites","Hello":"Hello","tdash is awesome!":"tdash is aweosme","fallback_english":"This phrase is in the english files!","Hello name. Your name is made from a variable.":"Hello {name}. Your name is made from a variable."}

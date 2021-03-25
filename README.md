@@ -40,6 +40,7 @@ Next you must initialize an instance of the TDash class as a variable named `tda
 |----------|--------------------|---------|--------------------------------------------------------------------------------------------------------------------------------|
 | fallback | "default" or "key" | "key"   | When the key is not found in the current language fallback to either the default language first, or fall back directly to key. |
 | defaultLang | string | "en" | The language that should be attempted first when rendering your app. Should match the key of one of your language JSON files. |
+| warn | boolean | false | Setting true will show warnings when keys fail; this is great in development settings to find out what has not been translated yet. |
 
 ### Change/Switch language and get current language
 The tdash object does not store the current language. Instead, the native HTML element's `lang` attribute is used as the single source of truth for what language tdash should pull translations from. On static sites, set this in your tag and you are done.
@@ -62,6 +63,13 @@ This would, for example, set the site to English and cause tdash to re-render al
 tdash tries to be a "html native" as possible and uses the native document setting for language. The default HTML element attribute is used to hold the current language.
 
 You can access it programmatically with `document.documentElement.lang` . See the sample for one way this can be used!
+
+### Interpolation
+Globally scopped variables, cane be interoplated at translation runtime.
+
+```
+"mytranslationkey": "This has the variable name inserted at {name}"
+```
 
 ## Contributing
 Contributors always welcome. Let's see how much we can push web components and custom elements!
