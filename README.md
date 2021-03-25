@@ -62,7 +62,7 @@ This would, for example, set the site to English and cause tdash to re-render al
 ### Current Language
 tdash tries to be a "html native" as possible and uses the native document setting for language. The default HTML element attribute is used to hold the current language.
 
-You can access it programmatically with `document.documentElement.lang` . See the sample for one way this can be used!
+You can access it programmatically with `document.documentElement.lang` . See the docs as a sample for one way this can be used!
 
 ### Interpolation
 Globally scopped variables, can be interoplated at translation runtime.
