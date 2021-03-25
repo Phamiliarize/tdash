@@ -65,10 +65,26 @@ tdash tries to be a "html native" as possible and uses the native document setti
 You can access it programmatically with `document.documentElement.lang` . See the sample for one way this can be used!
 
 ### Interpolation
-Globally scopped variables, cane be interoplated at translation runtime.
+Globally scopped variables, can be interoplated at translation runtime.
+
+So the globaly scoped:
 
 ```
-"mytranslationkey": "This has the variable name inserted at {name}"
+<script>
+var name = "Jess"
+</script>
+```
+
+Will be inserted into the following translation at runtime:
+
+```
+"mytranslationkey": "This has the variable "name" inserted here: {name}."
+```
+
+Resulting in:
+
+```
+This has the variable "name" inserted here: Jess
 ```
 
 ## Contributing
