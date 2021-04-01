@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="tdash.png" width="200"/>
+</p>
+
 # tdash
 tdash is a simple, intuitive solution for front-end translations on websites. Simply provide a JSON file with translations and tag any text you wish to translate...
 
