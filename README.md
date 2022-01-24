@@ -1,3 +1,5 @@
+# This repository is no longer maintained. If you are interested in seeing this go further, contact me
+
 ## Looking for contributors or requests for more features!
 
 <p align="center">
